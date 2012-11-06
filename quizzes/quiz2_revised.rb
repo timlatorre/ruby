@@ -1,9 +1,13 @@
-require 'pry'
+#Part I: declare the sum variable
+sum = 0
 
 #Part I: sum up numbers between 250 and 180,000
-# (250..180000).each do |x|
-# 	puts "#{x+x}"
-# end
+(250..180000).each do |x|
+	sum = sum + x
+end
+
+puts "#{sum}"
+
 
 #Part II: prompt
 	puts "Please type if you want a new (c)olor or (q)uit"
@@ -16,15 +20,15 @@ require 'pry'
 		color = gets.chomp
 		colors << color
 
-		puts "Thanks. Would you like to add (a)nother color or (q)uit?"
-		option = gets.chomp
+		puts "Please type if you want a new (c)olor or (q)uit"
+		response = gets.chomp	
+	end
 
-		if option != "q"
-			puts "What color would you like to add?"
-			color = gets.chomp
-			colors << color
-		elsif option == "q"
-			colors.each do |color|
+	if response == "q"
+		colors.each do |color|
 			puts "#{color}"
 		end
 	end
+
+
+
