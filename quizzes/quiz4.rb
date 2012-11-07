@@ -25,6 +25,4 @@ a = numbers
 a = a.collect {|x| x * x}
 puts "#{a}"
 
-binding.pry
-
 
